@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="职业卫生与职业医学 PDF 75-180 页本地题库">
+  <meta name="theme-color" content="#173f3b">
+  <title>职业卫生与职业医学 | 本地题库</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">职</div>
+        <div>
+          <strong>职业卫生与职业医学</strong>
+          <span>第三章 · PDF 75-180 页</span>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="答题视图">
+        <button class="nav-item is-active" data-view="practice" type="button"><span class="nav-symbol" aria-hidden="true">◆</span><span>章节练习</span></button>
+        <button class="nav-item" data-view="wrong" type="button"><span class="nav-symbol" aria-hidden="true">!</span><span>错题复习</span><b id="wrongCount">0</b></button>
+        <button class="nav-item" data-view="bookmarks" type="button"><span class="nav-symbol" aria-hidden="true">☆</span><span>重点收藏</span><b id="bookmarkCount">0</b></button>
+      </nav>
+
+      <div class="sidebar-scope">
+        <span class="overline">题库范围</span>
+        <strong>PDF 75-180 页</strong>
+        <p>生产性毒物与职业中毒。每道题保留 PDF 页码、章节、答案和解析。</p>
+      </div>
+      <div class="sidebar-footer"><i></i><span>答题记录仅保存在本机浏览器</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <span class="breadcrumb">第三章 / 生产性毒物与职业中毒 / PDF 75-180</span>
+          <h1 id="pageTitle">章节练习</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="sync-status"><i></i><span id="syncText">本地自动保存</span></span>
+          <button class="ghost-button" id="resetProgress" type="button" title="清除当前章节的答题记录"><span aria-hidden="true">↻</span> 一键重做当前章节</button>
+        </div>
+      </header>
+
+      <section class="metrics" aria-label="学习进度">
+        <div class="metric"><span>已完成</span><strong id="completedNumber">0</strong><small id="totalNumber">/ 0</small></div>
+        <div class="metric"><span>正确率</span><strong id="accuracyNumber">--</strong></div>
+        <div class="metric"><span>待复习</span><strong id="reviewNumber">0</strong><small>道错题</small></div>
+        <div class="overall-progress"><div class="progress-label"><span>总进度</span><b id="overallPercent">0%</b></div><div class="progress-track"><i id="progressBar"></i></div></div>
+      </section>
+
+      <section class="workspace">
+        <div class="content-column">
+          <div class="filter-row">
+            <div class="filter-group"><span class="filter-label">章节</span><div class="filter-chips" id="chapterFilters"></div></div>
+            <label class="type-filter"><span class="filter-label">题型</span><select id="modeSelect" aria-label="选择题型"><option value="all">全部题型</option><option value="single">单选题</option><option value="multiple">多选题</option></select><span id="poolLabel">0 道题</span></label>
+          </div>
+
+          <div class="empty-state" id="emptyState" hidden>
+            <span class="empty-mark" aria-hidden="true">✓</span>
+            <h2 id="emptyTitle">当前没有题目</h2>
+            <p id="emptyText">切换章节或视图继续练习。</p>
+            <button class="primary-button" data-view="practice" type="button">回到章节练习</button>
+          </div>
+
+          <article class="question-card" id="questionCard">
+            <div class="question-topline">
+              <div class="question-tags"><span class="chapter-tag" id="chapterTag">章节</span><span class="type-tag" id="typeTag">单选题</span></div>
+              <button class="bookmark-button" id="bookmarkButton" type="button" aria-label="收藏当前题目"><span id="bookmarkIcon" aria-hidden="true">☆</span><span id="bookmarkText">收藏</span></button>
+            </div>
+            <div class="question-body">
+              <div class="question-meta"><span id="questionKicker">QUESTION 01</span><span id="questionSource">PDF 1</span></div>
+              <h2 id="questionStem">题目加载中...</h2>
+              <p class="question-hint" id="questionHint"></p>
+              <form class="options-list" id="optionsList"></form>
+            </div>
+            <div class="feedback" id="feedback" hidden>
+              <div class="feedback-title"><span id="feedbackIcon" aria-hidden="true">✓</span><strong id="feedbackTitle">回答正确</strong></div>
+              <p id="feedbackText"></p>
+              <div class="explanation" id="explanation"></div>
+            </div>
+            <div class="question-footer">
+              <button class="secondary-button" id="prevButton" type="button">← 上一题</button>
+              <span class="save-status" id="saveStatus">选择后立即判分</span>
+              <button class="primary-button" id="submitButton" type="button">提交答案</button>
+              <button class="secondary-button next-button" id="nextButton" type="button">下一题 →</button>
+            </div>
+          </article>
+        </div>
+
+        <aside class="right-rail" aria-label="答题统计">
+          <section class="rail-section">
+            <div class="rail-heading"><h2>当前范围</h2><span id="sessionPercent">0%</span></div>
+            <div class="large-progress"><i id="sessionBar"></i></div>
+            <div class="rail-stats"><div><strong id="railDone">0</strong><span>已完成</span></div><div><strong id="railCorrect">0</strong><span>答对</span></div><div><strong id="railWrong">0</strong><span>错题</span></div></div>
+          </section>
+          <section class="rail-section question-map-section">
+            <div class="rail-heading"><h2>题目导航</h2><span id="mapCount">0 道</span></div>
+            <div class="map-tools"><button class="map-page-button" id="mapPrev" type="button" aria-label="上一组题目">←</button><span id="mapRange">0-0</span><button class="map-page-button" id="mapNext" type="button" aria-label="下一组题目">→</button></div>
+            <div class="question-map" id="questionMap"></div>
+            <div class="map-legend"><span><i class="legend-dot current"></i>当前</span><span><i class="legend-dot done"></i>已答</span><span><i class="legend-dot wrong"></i>错题</span></div>
+          </section>
+          <section class="micro-note"><span class="overline">当前提示</span><p id="memoryTip">先判断题型，再抓数字、部位、比例和因果方向。</p></section>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <noscript>本页面需要开启 JavaScript 才能答题。</noscript>
+  <script src="questions.js"></script>
+  <script src="question-bank.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
