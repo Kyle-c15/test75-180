@@ -2,7 +2,7 @@
   "use strict";
 
   const QUESTIONS = window.QUESTION_BANK || [];
-  const STORAGE_KEY = "occupational-health-pdf-075-180-v1";
+  const STORAGE_KEY = "occupational-health-pdf-075-180-v3";
   const PAGE_SIZE = 30;
   const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
   const TIPS = {
